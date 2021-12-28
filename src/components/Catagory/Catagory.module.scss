@@ -1,0 +1,130 @@
+$mainColor: #00ae4a;
+
+.catagory {
+    float: right;
+    width: 83%;
+    background-color: #f3f4f3;
+
+    .tableCatagory {
+        background-color: white;
+        border-collapse: collapse;
+        border-radius: 15px;
+        box-shadow: 1px 1px 7px #999999;
+        margin: 30px 0px 50px 270px;
+
+        thead {
+            .tableName {
+                background-color: $mainColor;
+
+                td {
+                    border-bottom-right-radius: 10px;
+                    border-top-left-radius: 10px;
+                    padding: 6px 20px 8px 20px;
+                    color: white;
+                    font-size: 19px;
+                    font-weight: bold;
+                }
+            }
+
+            .tableAmount {
+                td {
+                    color: red;
+                    font-weight: bold;
+                    font-size: 16px;
+                    padding: 15px 10px 20px 20px;
+                }
+            }
+
+            .emptyRow {
+                span {
+                    color: white;
+                    visibility: hidden;
+                }
+            }
+
+            .tableTitles {
+                border-collapse: collapse;
+                font-size: 17px;
+                font-weight: bold;
+
+                td {
+                    margin-left: 10px;
+                    background-color: #eaffec;
+
+                    span {
+                        color: $mainColor;
+                        display: block;
+                        padding: 6px 0px 6px 20px;
+                    }
+                }
+
+                .titleName {
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+                .none {
+                    background-color: white;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                &:hover {
+                    background-color: rgb(241, 255, 242);
+                }
+                td {
+                    padding: 10px 0px 10px 20px;
+                }
+
+                .catagoryName {
+                    color: orange;
+                    font-weight: bold;
+                }
+
+                .catagoryButton {
+                    display: flex;
+                    padding: 15px 15px 15px 80px;
+
+                    button {
+                        width: 70px;
+                        font-size: 17px;
+                        padding: 7px 7px 4px 7px;
+                        margin: 0px 5px;
+                        display: flex;
+                        outline: none;
+                        border-radius: 5px;
+                        border: 0px solid black;
+                        font-family: Cambria;
+                        font-weight: bold;
+
+                        .buttonIcon {
+                            margin-right: 5px;
+                        }
+                    }
+
+                    button:hover {
+                        cursor: pointer;
+                        .buttonIcon {
+                            width: 70px;
+                        }
+                        .buttonLabel {
+                            display: none;
+                            visibility: hidden;
+                        }
+                    }
+
+                    .buttonEdit {
+                        color: white;
+                        background-color: #0179cf;
+                    }
+
+                    .buttonDelete {
+                        color: white;
+                        background-color: #fb1307;
+                    }
+                }
+            }
+        }
+    }
+}

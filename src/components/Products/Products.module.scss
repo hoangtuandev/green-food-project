@@ -1,0 +1,197 @@
+$mainColor: #00ae4a;
+
+.products {
+    float: right;
+    width: 83%;
+    background-color: #f3f4f3;
+
+    .filterProducts {
+        margin-left: 70px;
+        .byCatagory,
+        .byPrice {
+            display: inline-block;
+            position: relative;
+            margin: 10px 10px 30px 10px;
+
+            .selected {
+                input {
+                    font-family: Cambria;
+                    font-weight: bold;
+                    border: 2px solid $mainColor;
+                    border-radius: 4px;
+                    color: gray;
+                    width: 230px;
+                    height: 30px;
+                    padding: 0px 10px;
+                    outline: none;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+
+                label {
+                    position: absolute;
+                    font-size: 20px;
+                    right: 10px;
+                    top: 6px;
+                    color: $mainColor;
+                    cursor: pointer;
+                }
+            }
+
+            .selected:hover + .options {
+                visibility: visible;
+            }
+
+            .options {
+                position: absolute;
+                background-color: white;
+                box-shadow: 2px 2px 5px gray;
+                border-radius: 7px;
+                border: 0px solid $mainColor;
+                visibility: hidden;
+
+                li {
+                    margin: 0px 0px;
+                    padding: 5px 10px;
+                }
+                li:hover {
+                    background-color: $mainColor;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .tableProducts {
+        background-color: white;
+        border-collapse: collapse;
+        margin: 10px 10px 30px 80px;
+        border-radius: 15px;
+        box-shadow: 1px 1px 7px #999999;
+
+        thead {
+            .tableName {
+                background-color: $mainColor;
+
+                td {
+                    border-bottom-right-radius: 10px;
+                    border-top-left-radius: 10px;
+                    padding: 10px 30px;
+                    color: white;
+                    font-size: 19px;
+                    font-weight: bold;
+                }
+            }
+
+            .tableAmount {
+                td {
+                    color: red;
+                    font-weight: bold;
+                    font-size: 16px;
+                    padding: 10px 20px 30px 30px;
+                }
+            }
+
+            .emptyRow {
+                span {
+                    color: white;
+                    visibility: hidden;
+                }
+            }
+
+            .tableTitles {
+                border-collapse: collapse;
+                font-size: 17px;
+                font-weight: bold;
+                td {
+                    background-color: #eaffec;
+                    span {
+                        color: $mainColor;
+                        text-align: center;
+                        display: block;
+                        margin: 0px 5px;
+
+                        padding: 6px 15px;
+                        border-radius: 5px;
+                    }
+                }
+
+                .none {
+                    background-color: white;
+                }
+
+                .titleStyles {
+                    text-align: center;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                &:hover {
+                    background-color: #eaffec;
+                }
+                td {
+                    padding: 0px 25px;
+                }
+
+                .productImage {
+                    img {
+                        width: 120px;
+                        height: 90px;
+                        box-shadow: 1px 1px 10px #d3d3d3;
+                        border-radius: 10px;
+                        margin: 10px;
+                    }
+                }
+                .productsName {
+                    color: orange;
+                    font-weight: bold;
+                }
+                .productStyles {
+                    text-align: center;
+                }
+
+                .productButton {
+                    display: flex;
+                    padding-top: 50px;
+                    button {
+                        width: 70px;
+                        font-size: 17px;
+                        padding: 7px 7px 4px 7px;
+                        margin: 0px 5px;
+                        display: flex;
+                        outline: none;
+                        border-radius: 5px;
+                        border: 0px solid black;
+
+                        .buttonIcon {
+                            margin-right: 5px;
+                        }
+                    }
+
+                    button:hover {
+                        cursor: pointer;
+                        .buttonIcon {
+                            width: 70px;
+                        }
+                        .buttonLabel {
+                            display: none;
+                            visibility: hidden;
+                        }
+                    }
+
+                    .buttonEdit {
+                        color: white;
+                        background-color: #0179cf;
+                    }
+
+                    .buttonDelete {
+                        color: white;
+                        background-color: #fb1307;
+                    }
+                }
+            }
+        }
+    }
+}
